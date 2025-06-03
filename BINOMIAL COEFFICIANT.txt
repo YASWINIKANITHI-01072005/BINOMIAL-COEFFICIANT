@@ -1,0 +1,33 @@
+BINOMIAL COEFFICIANT
+
+: Binomial coefficient often denoted as 
+(n)
+(k)  , represents the number of ways to choose k elements from a set of n elements.
+n chooses k
+*To find Binom we have a formula
+   			    n!
+			------------
+			k!(n-k)!
+#code for binom
+public class BinomialCoefficient
+{
+	static int fact(int n)
+	{
+		if(n==0) return 1;
+		return n*fact(n-1);
+	}
+	static long binom(int n,int k)
+	{
+		int  result =fact(n)/fact(k)*fact(n-k);
+		return result;
+	}
+	public static void main(String[] args)
+	{
+		int n=5;
+		int k =2;
+		System.out.println(binom(n,k));
+	}
+}
+
+O/P: 360
+
